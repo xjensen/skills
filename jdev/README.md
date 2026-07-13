@@ -1,10 +1,53 @@
 # jdev
 
-`jdev` is a hands-on, maximum-supervision skill for driving feature development. It covers all phases of a feature's lifecycle, from definition to completion. My goal is to keep this short, easy to remember, and flexible. 
+`jdev` is a hands-on, maximum-supervision skill for AI-driven development. It covers all phases of a feature's lifecycle, from definition to completion. The goal is to bring some structure and refinement to vibe coding sessions.
 
 ## The gimmick
 
 Each phase of a `jdev` run outputs a working file to your project. Instead of chatting with the agent to refine its output, instead you iterate with the agent to refine those working files.
+
+## Cheatsheet
+
+```
+# Define the job:
+/jdev define checkout "Let's implement guest checkout for the shopping cart."
+
+# Research the job (optional):
+/jdev research checkout
+
+# Design interfaces for the job (optional):
+/jdev design checkout "We need a new API endpoint."
+
+# Spike the risky bit with a throwaway prototype (optional):
+/jdev spike checkout "Can the session survive a payment redirect?"
+
+# Plan the job:
+/jdev plan checkout
+
+# Fresh eyes audit the plan, leaving comments (optional):
+/jdev challenge checkout
+
+# Address any comments (optional):
+/jdev resolve checkout
+
+# Implement:
+/jdev go checkout
+
+# Verify the completed work (optional):
+/jdev verify checkout
+
+# Close verify's gaps, if any (Round 2):
+/jdev go checkout
+
+# Verify again:
+/jdev verify checkout
+
+# PR-ready summary of the work:
+/jdev summarize checkout
+
+# Anytime: where does this stand?
+/jdev status checkout
+```
 
 ## Usage
 
@@ -203,21 +246,3 @@ Instructions can pull in another job's artifacts with `jdev:<job>` or `jdev:<job
 ```
 
 starts a fresh `billing` job from `checkout`'s deferred work. (Gaps found by `verify` are *not* follow-ups — they're unfinished scope of the current job and stay in the go ⇄ verify loop.)
-
-## A full example
-
-```
-/jdev define checkout "guest checkout for the cart"
-/jdev research checkout
-/jdev design checkout "REST endpoints + cart UI states"   # optional
-/jdev spike checkout "can the session survive a payment redirect?"   # optional
-/jdev plan checkout "keep the existing payment provider"
-/jdev challenge checkout        # fresh eyes audit the plan, leave markers…
-/jdev resolve checkout          # …and the findings get addressed
-/jdev go checkout
-/jdev verify checkout           # finds GAP-1, GAP-2
-/jdev go checkout               # closes the gaps (Round 2)
-/jdev verify checkout           # confirms — verdict: ready
-/jdev summarize checkout        # PR-ready summary of the work
-/jdev status checkout           # anytime: where does this stand?
-```
