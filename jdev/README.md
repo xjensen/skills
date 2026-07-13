@@ -6,49 +6,6 @@
 
 Each phase of a `jdev` run outputs a working file to your project. Instead of chatting with the agent to refine its output, instead you iterate with the agent to refine those working files.
 
-## Cheatsheet
-
-```
-# Define the job:
-/jdev define checkout "Let's implement guest checkout for the shopping cart."
-
-# Research the job (optional):
-/jdev research checkout
-
-# Design interfaces for the job (optional):
-/jdev design checkout "We need a new API endpoint."
-
-# Spike the risky bit with a throwaway prototype (optional):
-/jdev spike checkout "Can the session survive a payment redirect?"
-
-# Plan the job:
-/jdev plan checkout
-
-# Fresh eyes audit the plan, leaving comments (optional):
-/jdev challenge checkout
-
-# Address any comments (optional):
-/jdev resolve checkout
-
-# Implement:
-/jdev go checkout
-
-# Verify the completed work (optional):
-/jdev verify checkout
-
-# Close verify's gaps, if any (Round 2):
-/jdev go checkout
-
-# Verify again:
-/jdev verify checkout
-
-# PR-ready summary of the work:
-/jdev summarize checkout
-
-# Anytime: where does this stand?
-/jdev status checkout
-```
-
 ## Usage
 
 Here's a rough example of how to use the skill.
@@ -246,3 +203,46 @@ Instructions can pull in another job's artifacts with `jdev:<job>` or `jdev:<job
 ```
 
 starts a fresh `billing` job from `checkout`'s deferred work. (Gaps found by `verify` are *not* follow-ups — they're unfinished scope of the current job and stay in the go ⇄ verify loop.)
+
+## Cheatsheet
+
+```
+# Define the job:
+/jdev define checkout "Let's implement guest checkout for the shopping cart."
+
+# Research the job (optional):
+/jdev research checkout
+
+# Design interfaces for the job (optional):
+/jdev design checkout "We need a new API endpoint."
+
+# Spike the risky bit with a throwaway prototype (optional):
+/jdev spike checkout "Can the session survive a payment redirect?"
+
+# Plan the job:
+/jdev plan checkout
+
+# Fresh eyes audit the plan, leaving comments (optional):
+/jdev challenge checkout
+
+# Address any comments (optional):
+/jdev resolve checkout
+
+# Implement:
+/jdev go checkout
+
+# Verify the completed work (optional):
+/jdev verify checkout
+
+# Close verify's gaps, if any (Round 2):
+/jdev go checkout
+
+# Verify again:
+/jdev verify checkout
+
+# PR-ready summary of the work:
+/jdev summarize checkout
+
+# Anytime: where does this stand?
+/jdev status checkout
+```
