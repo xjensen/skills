@@ -50,7 +50,7 @@ Subsequent phases read the results of previous phases. Use this comment-and-reso
 /jdev go login
 ```
 
-### Interface
+## Interface
 
 ```
 /jdev <phase> <job> [instructions]
