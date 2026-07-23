@@ -1,8 +1,9 @@
 # `resolve` — Address Inline Comments
 
 Scan the feature folder's markdown files for inline comments and address them
-**in place** — this phase produces no `$JOB-resolve.md`; it edits the existing
-files (`$JOB-define.md`, `$JOB-plan.md`, etc.).
+**in place** — this phase produces no file of its own; it edits the existing
+working files (`$JOB-definition.md`, `$JOB-plan.md`, `$JOB-done.md`, and any
+custom artifacts).
 
 A comment is any text wrapped in triple asterisks with surrounding spaces — e.g.
 `*** tighten this section ***` or a standalone `*** is this still true? ***`

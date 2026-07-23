@@ -1,10 +1,10 @@
 # `plan` — Write the Implementation Plan
 
 Turn requirements and research into an **implementation plan**. Read the
-`define` and `research` outputs first if they exist, plus the `design` and
-`spike` outputs if those phases were run — the plan must honor settled
-contracts from `design` and verdicts from `spike`, not re-litigate them.
-Produce:
+definition file (`$JOB-definition.md`) first if it exists — all of it: the
+requirements base, plus the `## Research`, `## Design`, and `## Spike`
+sections if those phases were run. The plan must honor settled contracts from
+`## Design` and verdicts from `## Spike`, not re-litigate them. Produce:
 
 - **Approach** — the chosen design in a few sentences.
 - **Steps** — an ordered, reviewable sequence of changes.

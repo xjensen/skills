@@ -1,8 +1,9 @@
 # `spike` — De-risk the Riskiest Unknown
 
 Build a deliberately throwaway prototype to answer the **single riskiest open
-question** before committing to a plan. Read the `research` output first if it
-exists — its **Risks & unknowns** section is the natural source of spike
+question** before committing to a plan. This phase owns the `## Spike` section
+of the definition file — read the file's existing content first; the
+`## Research` section's **Risks & unknowns** is the natural source of spike
 questions. INSTRUCTIONS may name the question directly; otherwise pick the
 unknown whose answer most changes the plan, and say which one you picked.
 
@@ -19,7 +20,8 @@ Rules of engagement:
   record exactly which files were touched so they can be reverted, and don't
   commit them.
 
-Write `$OUT` as a **spike record**:
+Record each spike as its own subsection under `## Spike`, titled by its
+question (e.g. `### Can the session survive a payment redirect?`):
 
 - **Question** — the unknown this spike targets, and why it was the riskiest.
 - **What was built** — what the prototype does, where it lives, how to run it.
@@ -29,3 +31,6 @@ Write `$OUT` as a **spike record**:
   (confirms the recommendation, forces a different option, etc.).
 - **Disposal** — confirmation the tree is clean, or the exact paths still to
   remove/revert.
+
+Re-runs targeting a **new** unknown append a new subsection; INSTRUCTIONS
+naming an already-spiked question refine that question's subsection instead.
