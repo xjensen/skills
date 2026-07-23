@@ -36,7 +36,9 @@ summary itself contains code fences), so it's unambiguous exactly what gets
 copy-pasted into a pull request or changelog. Because the body lives inside a
 code block, it stands apart from the done file's own structure — use whatever
 headings, formatting, and structure serve the summary best, without regard for
-the parent document's heading levels.
+the parent document's heading levels. Do not hard-wrap lines for readability
+(max-measure-style line breaks): the paste destination handles its own
+wrapping, so each paragraph or list item stays on a single line.
 
 Write the summary with:
 
