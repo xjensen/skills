@@ -20,7 +20,7 @@ This will write a file to `.temp/login/login-definition.md`. **Don't skip this f
 
 ### 2. Drop comments into the file
 
-At any point, you can drop comments into this working file. This is perhaps the defining feature of `jdev`. You work in these files instead of directly through chat. Comments are denoted by a triple asterix: `*** My comment here... ***`. For example:
+At any point, you can drop comments into this working file. You work in these files instead of directly through chat. Comments are denoted by a triple asterix: `*** My comment here... ***`. For example:
 
 ```
 # `.temp/login/login-definition.md`
@@ -35,6 +35,8 @@ At any point, you can drop comments into this working file. This is perhaps the 
 
 - 80% of new visitors complete account creation without support contact. *** Let's make this 90% ***
 ```
+
+> Do not directly edit the content of these files! Just leave comments. Let the agent do the editing.
 
 ### 3. Resolve the comments
 
