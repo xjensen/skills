@@ -26,16 +26,23 @@ last, after `## Implementation` and any `## Verification` section.
 itself, never the process that produced it: no mention of jdev, phases,
 rounds, GAP IDs, working files, `.temp/` paths, or any other skill plumbing.
 Fold every round into one coherent account of the finished work — a reader
-should not be able to tell how many passes it took. Write the section so its
-body can be copied out whole and pasted into a pull request or changelog as-is.
-If a `## Verification` section exists, let its open gaps and drift findings
-feed the concerns list (described plainly, not by ID).
+should not be able to tell how many passes it took. If a `## Verification`
+section exists, let its open gaps and drift findings feed the concerns list
+(described plainly, not by ID).
 
-Write `## Summary` with:
+**Put the whole summary body in one fenced code block** directly under the
+`## Summary` heading (` ```markdown `, with more backticks in the fence if the
+summary itself contains code fences), so it's unambiguous exactly what gets
+copy-pasted into a pull request or changelog. Because the body lives inside a
+code block, it stands apart from the done file's own structure — use whatever
+headings, formatting, and structure serve the summary best, without regard for
+the parent document's heading levels.
+
+Write the summary with:
 
 - An opening **summary** — a short description of the work: what was built or
-  changed and why. A paragraph or two directly under the heading, ready to
-  paste as a PR description opener.
+  changed and why. A paragraph or two at the top of the block, ready to paste
+  as a PR description opener.
 - **Functional changes** — a short list of the practical changes to the
   application: new or changed behavior, user-visible effects.
 - **Code changes** — a concise description of the changes to the codebase,
